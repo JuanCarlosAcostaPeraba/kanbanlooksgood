@@ -1,73 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugins>
-	<plugin
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="https://plugins.glpi-project.org/apiplugin/plugin-schema.xsd"
-	>
-		<!-- Unique directory name of the plugin -->
-		<dir>kanbanlooksgood</dir>
+<root>
+	<name>Kanban Looks Good</name>
+	<key>kanbanlooksgood</key>
 
-		<!-- Displayed name -->
-		<name>Kanban Looks Good</name>
+	<!-- stable | unstable | beta | alpha -->
+	<state>stable</state>
 
-		<!-- Short description -->
-		<short_description>
-			Improve GLPI Project Kanban cards with native priority badges and planned duration, without
-			modifying core.
-		</short_description>
+	<!-- 40x40px recommended (we will replace this once the real icon is ready) -->
+	<logo>
+		https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/logo.png</logo>
 
-		<!-- Long description -->
-		<description>
-			Kanban Looks Good is a lightweight plugin for GLPI that enhances the Project Kanban board by
-			adding native
-			priority badges (with GLPI's own colors) and a human-readable planned duration on each card,
-			for both Projects
-			and Project Tasks — all without modifying any GLPI core files.
-		</description>
+	<description>
+		<short>
+			<en>Enhances the GLPI Project Kanban by displaying Priority and Planned Duration on cards.</en>
+		</short>
+		<long>
+			<en>
+							<![CDATA[
+Kanban Looks Good is a visual enhancement plugin for the GLPI Project Kanban module.  
+It adds automatic display of:
 
-		<!-- Plugin version -->
-		<version>1.0.0</version>
+- **Priority badge** (same format and colors as GLPI core)
+- **Planned Duration** (for both Projects and Project Tasks)
+- **Soft background color** based on project priority
+- Non-intrusive UI improvements without modifying GLPI core
 
-		<!-- License -->
-		<license>GPLv2+</license>
+This plugin aims to improve clarity, visibility and project management efficiency in daily use.
+							]]>
+					</en>
+		</long>
+	</description>
 
-		<!-- Homepage / repository URL -->
-		<homepage>https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood</homepage>
+	<homepage>https://github.com/juancarlosacostaperaba/kanbanlooksgood</homepage>
 
-		<!-- Minimum and maximum GLPI versions (max is exclusive) -->
-		<minGlpiVersion>10.0.0</minGlpiVersion>
-		<maxGlpiVersion>10.0.99</maxGlpiVersion>
+	<!-- Link to the release zip -->
+	<download>https://github.com/juancarlosacostaperaba/kanbanlooksgood/releases</download>
+	<issues>https://github.com/juancarlosacostaperaba/kanbanlooksgood/issues</issues>
+	<readme>https://github.com/juancarlosacostaperaba/kanbanlooksgood/blob/main/README.md</readme>
 
-		<!-- Download URL -->
-		<download>
-			https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood/releases/latest/download/kanbanlooksgood-1.0.0.zip
-		</download>
+	<authors>
+		<author>Juan Carlos Acosta Perabá</author>
+	</authors>
 
-		<!-- Author -->
-		<authors>
-			<author>
-				<name>Juan Carlos Acosta Perabá</name>
-				<homepage>https://github.com/JuanCarlosAcostaPeraba</homepage>
-				<email>juancarlos.ap.dev@gmail.com</email>
-			</author>
-		</authors>
+	<versions>
+		<version>
+			<num>1.0.0</num>
+			<compatibility>~10.0.0</compatibility>
+			<download_url>
+				https://github.com/juancarlosacostaperaba/kanbanlooksgood/releases/download/v1.0.0/kanbanlooksgood-1.0.0.zip
+			</download_url>
+		</version>
+	</versions>
 
-		<!-- Compatibility -->
-		<requirements>
-			<php>
-				<min>7.4</min>
-				<max>8.3</max>
-			</php>
-		</requirements>
+	<langs>
+		<lang>en_GB</lang>
+		<lang>es_ES</lang>
+	</langs>
 
-		<!-- Tags -->
-		<tags>
+	<license>GPL v2+</license>
+
+	<tags>
+		<en>
 			<tag>kanban</tag>
 			<tag>projects</tag>
-			<tag>ui</tag>
 			<tag>priority</tag>
 			<tag>duration</tag>
-		</tags>
+			<tag>ui-enhancement</tag>
+		</en>
+		<es_ES>
+			<tag>kanban</tag>
+			<tag>proyectos</tag>
+			<tag>prioridad</tag>
+			<tag>duracion</tag>
+		</es_ES>
+	</tags>
 
-	</plugin>
-</plugins>
+	<!-- Replace these after generating real screenshots -->
+	<screenshots>
+		<screenshot>
+			https://raw.githubusercontent.com/juancarlosacostaperaba/kanbanlooksgood/main/assets/screenshots/screenshot1.png</screenshot>
+		<screenshot>
+			https://raw.githubusercontent.com/juancarlosacostaperaba/kanbanlooksgood/main/assets/screenshots/screenshot2.png</screenshot>
+	</screenshots>
+</root>

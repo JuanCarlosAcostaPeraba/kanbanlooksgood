@@ -23,10 +23,12 @@ A lightweight and non-intrusive GLPI plugin that enhances the **Project Kanban**
 
 ## 🚀 Installation
 
-1. Copy the folder `kanbanlooksgood` into: 
+1. Copy the folder `kanbanlooksgood` into:
+
     ```
     glpi/plugins/
     ```
+
 2. Go to **GLPI → Configuration → Plugins**
 3. Find **Kanban Looks Good**
 4. Click **Install**, then **Enable**
@@ -34,11 +36,13 @@ A lightweight and non-intrusive GLPI plugin that enhances the **Project Kanban**
 ## 🧩 How it works
 
 ### Priority
+
 - Uses GLPI’s priority configuration (badge + color)
 - Applies priority color to the card header
 - Softened version of the same color is used as card background
 
 ### Planned Duration
+
 - **Projects**: sum of all related ProjectTask planned durations  
 - **ProjectTasks**: uses their native `planned_duration` field  
 - Always formatted the same way GLPI displays durations
@@ -70,4 +74,4 @@ Fully compatible with GLPI plugin licensing requirements.
 
 ## 👤 Author
 
-Developed by **Juan Carlos Acosta Perabá**, for the IT Engineering Team at **HUC – Hospital Universitario de Canarias**.
+Developed by **[Juan Carlos Acosta Perabá](https://github.com/JuanCarlosAcostaPeraba)**, for the IT Engineering Team at **HUC – Hospital Universitario de Canarias**.

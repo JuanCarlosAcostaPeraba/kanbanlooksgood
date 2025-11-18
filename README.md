@@ -1,68 +1,73 @@
 # Kanban Looks Good
 
-Plugin para GLPI que añade visualización de **Prioridad** y **Duración Planificada** en las tarjetas del Kanban de Proyectos.
+[![GLPI](https://img.shields.io/badge/GLPI-10.x-blue.svg)](https://glpi-project.org)
+[![License: GPLv2+](https://img.shields.io/badge/License-GPLv2+-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+[![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg)]()
+[![Maintained](https://img.shields.io/badge/Maintained-yes-success.svg)]()
 
-## Características
+A lightweight and non-intrusive GLPI plugin that enhances the **Project Kanban** by displaying **Priority** and **Planned Duration** directly on each card — without modifying any GLPI core files.
 
-- ✅ Muestra el badge de prioridad con su color configurado en GLPI
-- ✅ Muestra la duración planificada formateada (igual que en el formulario de proyecto)
-- ✅ Aplica color de fondo suavizado a las tarjetas según la prioridad
-- ✅ Compatible con Proyectos y Tareas (ProjectTask)
-- ✅ No modifica el código core de GLPI
+## ✨ Features
 
-## Requisitos
+- 🔹 Displays GLPI’s native **priority badge** on Project and ProjectTask cards  
+- 🔹 Shows **planned duration** using GLPI’s own formatting  
+- 🔹 Adds a clean metadata bar below each card header  
+- 🔹 Applies softened background color according to priority  
+- 🔹 Works for both Projects and ProjectTasks  
+- 🔹 Fully hook-based — **no core overrides**
 
-- GLPI 10.0.0 o superior
-- PHP 7.4 o superior
+## 📦 Requirements
 
-## Instalación
+- GLPI **10.0.0+**
+- PHP **7.4+**
 
-1. Copia la carpeta `kanbanlooksgood` a `plugins/` de tu instalación de GLPI
-2. Ve a **Configuración > Plugins**
-3. Busca "Kanban Looks Good" y actívalo
+## 🚀 Installation
 
-## Funcionalidad
+1. Copy the folder `kanbanlooksgood` into: 
+    ```
+    glpi/plugins/
+    ```
+2. Go to **GLPI → Configuration → Plugins**
+3. Find **Kanban Looks Good**
+4. Click **Install**, then **Enable**
 
-### Prioridad
+## 🧩 How it works
 
-- Se muestra el badge de prioridad con el mismo formato que en el resto de GLPI
-- El color de la prioridad se aplica al header de la tarjeta
-- El fondo de la tarjeta se suaviza con el color de prioridad para mejor legibilidad
+### Priority
+- Uses GLPI’s priority configuration (badge + color)
+- Applies priority color to the card header
+- Softened version of the same color is used as card background
 
-### Duración Planificada
+### Planned Duration
+- **Projects**: sum of all related ProjectTask planned durations  
+- **ProjectTasks**: uses their native `planned_duration` field  
+- Always formatted the same way GLPI displays durations
 
-- Para **Proyectos**: Muestra la suma de duraciones planificadas de todas sus tareas
-- Para **Tareas**: Muestra la duración planificada de la tarea
-- El formato es el mismo que se usa en los formularios de GLPI
-
-## Desarrollo
-
-### Estructura del Plugin
+## 🏗️ Plugin Structure
 
 ```
 kanbanlooksgood/
-├── setup.php          # Registro del plugin y hooks
-├── inc/
-│   └── hook.php       # Hook para añadir metadata
-├── js/
-│   └── kanban.js      # JavaScript para renderizado frontend
-├── css/
-│   └── kanban.css     # Estilos CSS
-└── README.md          # Este archivo
+    ├── setup.php # Plugin registration + hooks
+    ├── inc/
+    │    └── hook.class.php # Injects metadata into Kanban cards
+    ├── js/
+    │    └── kanban.js # Frontend enhancements (color + metadata bar)
+    ├── css/
+    │    └── kanban.css # Styling for metadata section
+    └── README.md
 ```
 
-### Hooks Utilizados
+## 🔌 Hooks Used
 
-- `KANBAN_ITEM_METADATA`: Añade prioridad y duración a la metadata de las tarjetas
+- **`Hooks::KANBAN_ITEM_METADATA`**  
+  Injects priority, planned duration, and colors directly into card metadata so the frontend can render everything instantly.
 
-### Eventos JavaScript
+## 📝 License
 
-El plugin intercepta los siguientes eventos del Kanban:
-- `kanban:post_build`: Después de construir el Kanban
-- `kanban:refresh`: Al refrescar el Kanban
-- `kanban:card_move`: Al mover una tarjeta
-- `kanban:card_add`: Al añadir una tarjeta
+**GPLv2+**
 
-## Licencia
+Fully compatible with GLPI plugin licensing requirements.
 
-GPLv2+
+## 👤 Author
+
+Developed by **Juan Carlos Acosta Perabá**, for the IT Engineering Team at **HUC – Hospital Universitario de Canarias**.

@@ -5,37 +5,52 @@
 	<!-- stable | unstable | beta | alpha -->
 	<state>stable</state>
 
-	<!-- 40x40px recommended (we will replace this once the real icon is ready) -->
-	<logo>
-		https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/logo.png</logo>
+	<!-- 40x40px or bigger. Marketplace will resize it. -->
+	<logo>https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/logo.png</logo>
 
 	<description>
 		<short>
 			<en>Enhances the GLPI Project Kanban by displaying Priority and Planned Duration on cards.</en>
+			<es_ES>Mejora el Kanban de Proyectos de GLPI mostrando Prioridad y Duración Planificada.</es_ES>
 		</short>
 		<long>
-			<en>
-							<![CDATA[
-Kanban Looks Good is a visual enhancement plugin for the GLPI Project Kanban module.  
-It adds automatic display of:
+			<en><![CDATA[
+**Kanban Looks Good** is a visual enhancement plugin for the GLPI Project Kanban module.
 
-- **Priority badge** (same format and colors as GLPI core)
-- **Planned Duration** (for both Projects and Project Tasks)
-- **Soft background color** based on project priority
-- Non-intrusive UI improvements without modifying GLPI core
+It automatically adds:
 
-This plugin aims to improve clarity, visibility and project management efficiency in daily use.
-							]]>
-					</en>
+- **Priority badge** (same format and colors used by GLPI core)
+- **Planned Duration** for Projects and Project Tasks
+- **Soft background shading** based on project priority
+- **Non-intrusive UI improvements** without modifying GLPI core
+
+Designed to improve visibility, clarity and project management efficiency.
+
+Developed for real-world usage at the **Hospital Universitario de Canarias (HUC)**.
+			]]></en>
+
+			<es_ES><![CDATA[
+**Kanban Looks Good** es un plugin de mejora visual para el Kanban de Proyectos de GLPI.
+
+Añade automáticamente:
+
+- **Badge de prioridad** (mismo formato y colores del core de GLPI)
+- **Duración planificada** para Proyectos y Tareas
+- **Sombreado de fondo** suavizado según la prioridad
+- Mejoras **no intrusivas**, sin modificar el core de GLPI
+
+Diseñado para mejorar la visibilidad y la gestión diaria de proyectos.
+
+Desarrollado para uso real en el **Hospital Universitario de Canarias (HUC)**.
+			]]></es_ES>
 		</long>
 	</description>
 
-	<homepage>https://github.com/juancarlosacostaperaba/kanbanlooksgood</homepage>
+	<homepage>https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood</homepage>
 
-	<!-- Link to the release zip -->
-	<download>https://github.com/juancarlosacostaperaba/kanbanlooksgood/releases</download>
-	<issues>https://github.com/juancarlosacostaperaba/kanbanlooksgood/issues</issues>
-	<readme>https://github.com/juancarlosacostaperaba/kanbanlooksgood/blob/main/README.md</readme>
+	<download>https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood/releases</download>
+	<issues>https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood/issues</issues>
+	<readme>https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/README.md</readme>
 
 	<authors>
 		<author>Juan Carlos Acosta Perabá</author>
@@ -46,7 +61,7 @@ This plugin aims to improve clarity, visibility and project management efficienc
 			<num>1.0.0</num>
 			<compatibility>~10.0.0</compatibility>
 			<download_url>
-				https://github.com/juancarlosacostaperaba/kanbanlooksgood/releases/download/v1.0.0/kanbanlooksgood-1.0.0.zip
+				https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood/releases/download/v1.0.0/kanbanlooksgood-1.0.0.zip
 			</download_url>
 		</version>
 	</versions>
@@ -65,20 +80,24 @@ This plugin aims to improve clarity, visibility and project management efficienc
 			<tag>priority</tag>
 			<tag>duration</tag>
 			<tag>ui-enhancement</tag>
+			<tag>glpi</tag>
+			<tag>plugin</tag>
 		</en>
 		<es_ES>
 			<tag>kanban</tag>
 			<tag>proyectos</tag>
 			<tag>prioridad</tag>
 			<tag>duracion</tag>
+			<tag>glpi</tag>
+			<tag>plugin</tag>
 		</es_ES>
 	</tags>
 
-	<!-- Replace these after generating real screenshots -->
 	<screenshots>
-		<screenshot>
-			https://raw.githubusercontent.com/juancarlosacostaperaba/kanbanlooksgood/main/assets/screenshots/screenshot1.png</screenshot>
-		<screenshot>
-			https://raw.githubusercontent.com/juancarlosacostaperaba/kanbanlooksgood/main/assets/screenshots/screenshot2.png</screenshot>
+		<screenshot>https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/screenshots/screenshot-kanban-overview.png</screenshot>
+		<screenshot>https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/screenshots/screenshot-card-priority.png</screenshot>
+		<screenshot>https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/screenshots/screenshot-before-after.png</screenshot>
+		<screenshot>https://raw.githubusercontent.com/JuanCarlosAcostaPeraba/kanbanlooksgood/main/assets/screenshots/screenshot-project-duration.png</screenshot>
 	</screenshots>
+
 </root>

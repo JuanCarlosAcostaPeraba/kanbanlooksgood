@@ -11,3 +11,6 @@
 .env.production
 
 versions
+
+# Release ZIPs
+*.zip

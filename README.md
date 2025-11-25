@@ -1,6 +1,6 @@
 # Kanban Looks Good
 
-[![GLPI](https://img.shields.io/badge/GLPI-10.x-blue.svg)](https://glpi-project.org)
+[![GLPI](https://img.shields.io/badge/GLPI-10.0.x-blue.svg)](https://glpi-project.org)
 [![License: GPLv2+](https://img.shields.io/badge/License-GPLv2+-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 [![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg)]()
 [![Maintained](https://img.shields.io/badge/Maintained-yes-success.svg)]()
@@ -9,16 +9,17 @@ A lightweight and non-intrusive GLPI plugin that enhances the **Project Kanban**
 
 ## ✨ Features
 
-- 🔹 Displays GLPI’s native **priority badge** on Project and ProjectTask cards  
-- 🔹 Shows **planned duration** using GLPI’s own formatting  
-- 🔹 Adds a clean metadata bar below each card header  
-- 🔹 Applies softened background color according to priority  
-- 🔹 Works for both Projects and ProjectTasks  
+- 🔹 Displays GLPI's native **priority badge** on Project and ProjectTask cards
+- 🔹 Shows **planned duration** using GLPI's own formatting
+- 🔹 Adds a clean metadata bar below each card header
+- 🔹 Applies softened background color according to priority
+- 🔹 Works for both Projects and ProjectTasks
 - 🔹 Fully hook-based — **no core overrides**
+- 🔹 **Configurable settings** via GLPI admin panel
 
 ## 📦 Requirements
 
-- GLPI **10.0.0+**
+- GLPI **10.0.0 - 10.0.99**
 - PHP **7.4+**
 
 ## 🚀 Installation
@@ -33,38 +34,63 @@ A lightweight and non-intrusive GLPI plugin that enhances the **Project Kanban**
 3. Find **Kanban Looks Good**
 4. Click **Install**, then **Enable**
 
+## ⚙️ Configuration
+
+Access the plugin settings via **GLPI → Configuration → Plugins → Kanban Looks Good**.
+
+Available options:
+
+- **Show Priority Badge**: Enable/disable priority badge display on cards
+- **Show Planned Duration**: Enable/disable planned duration display
+- **Work Hours per Day**: Configure hours per work day for duration calculations (1-24 hours, default: 7)
+
 ## 🧩 How it works
 
 ### Priority
 
-- Uses GLPI’s priority configuration (badge + color)
+- Uses GLPI's priority configuration (badge + color)
 - Applies priority color to the card header
 - Softened version of the same color is used as card background
 
 ### Planned Duration
 
-- **Projects**: sum of all related ProjectTask planned durations  
-- **ProjectTasks**: uses their native `planned_duration` field  
-- Always formatted the same way GLPI displays durations
+- **Projects**: sum of all related ProjectTask planned durations
+- **ProjectTasks**: uses their native `planned_duration` field
+- Duration format uses configurable work hours per day (e.g., "2d 3h 30min")
 
 ## 🏗️ Plugin Structure
 
 ```
 kanbanlooksgood/
-    ├── setup.php # Plugin registration + hooks
-    ├── inc/
-    │    └── hook.class.php # Injects metadata into Kanban cards
-    ├── js/
-    │    └── kanban.js # Frontend enhancements (color + metadata bar)
-    ├── css/
-    │    └── kanban.css # Styling for metadata section
-    └── README.md
+├── setup.php                  # Plugin registration + hooks
+├── plugin.xml                 # Plugin metadata for GLPI marketplace
+├── inc/
+│   ├── hook.class.php         # Injects metadata into Kanban cards
+│   └── config.class.php       # Plugin configuration management
+├── front/
+│   └── config.form.php        # Configuration form handler
+├── js/
+│   ├── kanban.js              # Frontend enhancements (color + metadata bar)
+│   └── config_inject.js       # Configuration injection for JavaScript
+├── css/
+│   └── kanban.css             # Styling for metadata section
+├── locales/
+│   └── es_ES.php              # Spanish translations
+├── assets/
+│   ├── logo.png               # Plugin logo
+│   └── screenshots/           # Screenshots for marketplace
+└── README.md
 ```
 
 ## 🔌 Hooks Used
 
-- **`Hooks::KANBAN_ITEM_METADATA`**  
+- **`Hooks::KANBAN_ITEM_METADATA`**
   Injects priority, planned duration, and colors directly into card metadata so the frontend can render everything instantly.
+
+## 🌐 Translations
+
+- English (en_GB) - Default
+- Spanish (es_ES)
 
 ## 📝 License
 

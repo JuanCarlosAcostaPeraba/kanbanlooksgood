@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/badge/Version-1.2.0-green.svg)](https://github.com/JuanCarlosAcostaPeraba/kanbanlooksgood/releases)
 [![GLPI Marketplace](https://img.shields.io/badge/GLPI_Marketplace-Available-orange.svg)](https://plugins.glpi-project.org/#/plugin/kanbanlooksgood)
 [![GLPI](https://img.shields.io/badge/GLPI-10.0.x-blue.svg)](https://glpi-project.org)
-[![License: GPLv2+](https://img.shields.io/badge/License-GPLv2+-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+[![License: GPLv3+](https://img.shields.io/badge/License-GPLv3+-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-success.svg)]()
 
 A lightweight and non-intrusive GLPI plugin that enhances the **Project Kanban** by displaying **Priority** and **Planned Duration** directly on each card — without modifying any GLPI core files.
@@ -104,10 +104,10 @@ kanbanlooksgood/
 
 ## 📝 License
 
-**GPLv2+**
+**GPLv3+**
 
 Fully compatible with GLPI plugin licensing requirements.
 
 ## 👤 Author
 
-Developed by **[Juan Carlos Acosta Perabá](https://github.com/JuanCarlosAcostaPeraba)**, for the IT Engineering Team at **HUC – Hospital Universitario de Canarias**.
+Developed by **[Juan Carlos Acosta Perabá](https://github.com/JuanCarlosAcostaPeraba)** for **HUC – Hospital Universitario de Canarias**.

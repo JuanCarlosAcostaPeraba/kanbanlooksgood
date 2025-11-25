@@ -65,7 +65,7 @@ function plugin_version_kanbanlooksgood()
         'name'         => 'Kanban Looks Good',
         'version'      => PLUGIN_KANBANLOOKSGOOD_VERSION,
         'author'       => '<a href="mailto:juancarlos.ap.dev@gmail.com">Juan Carlos Acosta Perabá</a>',
-        'license'      => 'GPLv2+',
+        'license'      => 'GPLv3+',
         'homepage'     => 'https://github.com/juancarlosacostaperaba/kanbanlooksgood',
         'requirements' => [
             'glpi' => [
